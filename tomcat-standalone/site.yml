@@ -1,8 +1,8 @@
 ---
 # This playbook deploys a simple standalone Tomcat 7 server.
 
-- hosts: tomcat-servers
-  remote_user: root
+- hosts: "{{ webservers }}"
+  remote_user: "{{root_user}}"
   become: yes
   become_method: sudo
 
