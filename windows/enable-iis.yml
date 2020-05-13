@@ -2,8 +2,8 @@
 # This playbook installs and enables IIS on Windows hosts
 
 - name: Install IIS
-  hosts: all
-  gather_facts: false
+  hosts: "{{ host_group }}"
+  
   tasks:
     - name: Install IIS
       win_feature:
